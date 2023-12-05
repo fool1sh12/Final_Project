@@ -3,7 +3,7 @@
   <%= form.input :title %>
 
   <div>
-    <%= form.input :author %>
+    <%= form.association :author, label_method: :last_name %>
   </div>
 
   <div>

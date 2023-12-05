@@ -4,10 +4,12 @@
 
 <div id="books">
   <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
+    <div class="card">
+      <%= render book %>
+      <p>
+        <%= link_to "Show this book", book %>
+      </p>
+    </div>
   <% end %>
 </div>
 

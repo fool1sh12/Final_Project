@@ -1,7 +1,9 @@
 class SearchController < ApplicationController
   def index
     @query = params[:query]
+    @author_id = params[:author_id]
 
-    @books = Book.where("title like '%#{@query}%'")
+    @search = Search.new(@query, :author_id => @author_id)
+    @books = @search.results
   end
 end

@@ -1,9 +1,21 @@
 <h1>Search</h1>
 
 <%= form_with url: "/search", method: :get do |form| %>
-  <%= form.label :query, "Search for:" %>
-  <%= form.text_field :query, :value => @query %>
-  <%= form.submit "Search" %>
+  <div>
+    <%= form.label :query, "Search for:", :class => "form-label" %>
+    <%= form.text_field :query, :value => @query, :class => "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :author_id, "Filter by Author:", :class => "form-label" %>
+    <%= form.select :author_id, Author.all.map { |a| [a.full_name, a.id] },
+      { :selected => @author_id, :include_blank => true},
+      { :class => "form-select" } %>
+  </div>
+
+  <div>
+    <%= form.submit "Search", :class => "btn btn-outline-info" %>
+  </div>
 <% end %>
 
 <% if @query.present? %>

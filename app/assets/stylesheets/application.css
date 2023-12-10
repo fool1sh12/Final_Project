@@ -14,6 +14,15 @@
  *= require_self
  */
 
+#logo1 {
+  color: #336699;
+  font-weight: bold;
+}
+
+#logo2 {
+  color: #eedb00;
+}
+
 .card {
   border: 1px solid gray;
   padding: 1rem 2rem;

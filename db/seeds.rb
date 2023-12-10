@@ -21,7 +21,8 @@ end
   num = rand(1...100)
   Book.create({
     title: Faker::Book.title,
-    author_id: num
+    author_id: num,
+    description: Faker::Quote.famous_last_words
   })
 
 end

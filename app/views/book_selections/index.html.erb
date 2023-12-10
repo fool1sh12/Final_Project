@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Book selections</h1>
+
+<div id="book_selections">
+  <% @book_selections.each do |book_selection| %>
+    <%= render book_selection %>
+    <p>
+      <%= link_to "Show this book selection", book_selection %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New book selection", new_book_selection_path %>

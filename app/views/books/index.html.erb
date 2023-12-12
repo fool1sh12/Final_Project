@@ -7,10 +7,10 @@
     <div class="card">
       <%= render book %>
       <p>
-        <%= link_to "Show this book", book %>
+      <%= button_to "Show this book", book, :class => "btn btn-info", :method => "get" %>
       </p>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New book", new_book_path %>
+<%= button_to "New book", new_book_path, :class => "btn btn-warning", :method => "get" %>

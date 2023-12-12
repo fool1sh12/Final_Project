@@ -7,10 +7,10 @@
     <div class="card"> 
       <%= render author %>
       <p>
-        <%= link_to "Show this author", author %>
+      <%= button_to "Show this author", author, :class => "btn btn-info", :method => "get" %>
       </p>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New author", new_author_path %>
+<%= button_to "New author", new_author_path, :class => "btn btn-warning", :method => "get" %>

@@ -2,10 +2,9 @@
 
 <%= render @book %>
 
-<div>
-  <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning", "data-book-id" => @book.id %>
-
-  <%= link_to "Back to books", books_path %>
+<div class="show-button">
+  <%= button_to "Back to books", books_path, :class => "btn btn-info", :method => "get" %>
+  <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning mx-3", "data-book-id" => @book.id %>
   
-  <%= button_to "Destroy this book", @book, :class => "btn btn-warning mt-3", method: :delete %>
 </div>
+

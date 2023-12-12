@@ -34,3 +34,7 @@
  max-width: 30rem;
 }
 
+.show-button {
+  display: flex;
+  justify-content: start;
+}

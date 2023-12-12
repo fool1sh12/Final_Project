@@ -7,14 +7,14 @@
   </div>
 
   <div>
-    <%= form.label :author_id, "Filter by Author:", :class => "form-label" %>
+    <%= form.label :author_id, "Filter by Author:", :class => "form-label mt-3" %>
     <%= form.select :author_id, Author.all.map { |a| [a.full_name, a.id] },
       { :selected => @author_id, :include_blank => true},
       { :class => "form-select" } %>
   </div>
 
   <div>
-    <%= form.submit "Search", :class => "btn btn-outline-info" %>
+    <%= form.submit "Search", :class => "btn btn-outline-info mt-3" %>
   </div>
 <% end %>
 

@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @selection %>
+<div class="card">
+  <%= render @selection %>
 
-<div>
-  <%= link_to "Edit this selection", edit_selection_path(@selection) %> |
-  <%= link_to "Back to selections", selections_path %>
+  <div class="show-button">
+    <%= button_to "Edit Book", edit_selection_path(@selection), :class => "btn btn-info mx-3", :method => "get" %>
+    <%= button_to "Back to selections", selections_path, :class => "btn btn-warning mx-3", :method => "get" %>
 
-  <%= button_to "Destroy this selection", @selection, method: :delete %>
+    <%= button_to "Delete Book", @selection, :class => "btn btn-danger mx-3", method: :delete %>
+  </div>
 </div>

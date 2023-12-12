@@ -1,13 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Selections</h1>
+<h1>Your Books</h1>
 
 <div id="selections">
   <% @selections.each do |selection| %>
-    <%= render selection %>
-    <p>
-      <%= link_to "Show this selection", selection %>
-    </p>
+    <div class="card">
+      <%= render selection %>
+      <p>
+      <%= button_to "Select Book", selection, :class => "btn btn-warning", :method => "get" %>
+      </p>
+    </div>
   <% end %>
 </div>
 

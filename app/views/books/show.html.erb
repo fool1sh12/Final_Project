@@ -3,8 +3,9 @@
 <%= render @book %>
 
 <div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
+  <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning", "data-book-id" => @book.id %>
 
+  <%= link_to "Back to books", books_path %>
+  
   <%= button_to "Destroy this book", @book, :class => "btn btn-warning mt-3", method: :delete %>
 </div>

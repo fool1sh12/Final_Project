@@ -8,6 +8,9 @@
       <%= render book %>
       <p>
       <%= button_to "Show this book", book, :class => "btn btn-info", :method => "get" %>
+      </p> 
+      <p>
+      <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning", "data-book-id" => book.id %>
       </p>
     </div>
   <% end %>

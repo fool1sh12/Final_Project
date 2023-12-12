@@ -66,6 +66,6 @@ class SelectionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def selection_params
-      params.require(:selection).permit(:add_book, :book_id, :user_id)
+      params.require(:selection).permit(:add_book, :book_id, :user_id, :rating)
     end
 end

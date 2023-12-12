@@ -5,4 +5,19 @@
     <%= selection.book.title %>
   </p>
 
+  <p>
+    <strong>Author:</strong>
+    <%= selection.book.author.full_name %>
+  </p>
+
+  <p>
+    <strong>Rating:</strong>
+    <% if selection.rating == 0 %>
+      Not Rated!
+    <% else %>
+      <%= selection.rating %>
+    <% end %>
+  </p>
+  
+
 </div>

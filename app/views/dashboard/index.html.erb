@@ -1,11 +1,49 @@
-<h1>My Goals</h1>
+<h1>My Reading Statistics</h1>
 
-<h2>Selected Books:</h2>
+<div class="card mt-5">
+  <h2>Selected Books:</h2>
 
-<h5>
-  You have selected 
-  <span>
-    <%= Selection.all.count %> 
-  </span>
-  books
-</h5>
+  <h5>
+    You have selected 
+    <span class="text-info">
+      <%= Selection.all.count %> 
+    </span>
+   book(s)
+  </h5>
+</div>
+
+<div class="card mt-5">
+  <h2>Books Reading Statistics:</h2>
+
+  <h5>
+    You have read a total of 
+    <span class="text-info">
+      <%= Selection.all.where(status: "Read").count %> 
+    </span>
+    book(s)
+  </h5>
+
+  <h5>
+    You are currently reading
+    <span class="text-info">
+      <%= Selection.all.where(status: "Currently reading").count %> 
+    </span>
+    book(s)
+  </h5>
+
+  <h5>
+    You want to eventually read 
+    <span class="text-info">
+      <%= Selection.all.where(status: "Want to read").count %> 
+    </span>
+   book(s)
+  </h5>
+
+  <h5>
+    The average rating of your books is: 
+    <span class="text-info">
+      <%= Selection.last.rating_avg %> 
+    </span>
+    stars
+  </h5>
+</div>

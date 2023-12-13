@@ -18,4 +18,20 @@ class Selection < ApplicationRecord
       "Not rated yet!"
     end
   end 
+
+  def rating_avg
+    total = 0
+    count = 0
+    Selection.all.each do |s|
+      if s.rating?
+        total = total + s.rating
+        count = count + 1
+      end
+    end
+    
+    avg = total.to_f / count 
+    return avg
+  end
+        
+
 end

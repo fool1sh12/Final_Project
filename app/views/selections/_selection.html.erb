@@ -12,12 +12,20 @@
 
   <p>
     <strong>Rating:</strong>
-    <% if selection.rating == 0 %>
-      Not Rated!
-    <% else %>
+    <% if selection.rating? %>
       <%= selection.rating %>
+    <% else %>
+      Not Rated!
     <% end %>
   </p>
   
+  <p>
+    <strong>Status:</strong>
+    <% if selection.status? %>
+      <%= selection.status %>
+    <% else %>
+      Status Not Set!
+    <% end %>
+  </p>
 
 </div>

@@ -6,6 +6,7 @@
   <div class="form-inputs">
     <%= f.association :book %>
     <%= f.select :rating, [['Not Read Yet!', 0],['1 Star', 1], ['2 Stars', 2], ['3 Stars', 3], ['4 Stars', 4], ['5 Stars', 5]], {}, {class: "form-control"} %>
+    <%= f.select :status, ['Want to read', 'Currently reading', 'Read'], {:selected => 'Want to read'}, {class: "form-control mt-3"}  %>
   </div>
 
   <div class="form-actions">

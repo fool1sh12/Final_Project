@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @goal %>
+<div class="card">
+  <%= render @goal %>
 
-<div>
-  <%= link_to "Edit this goal", edit_goal_path(@goal) %> |
-  <%= link_to "Back to goals", goals_path %>
+  <div class="show-button">
+    <%= button_to "Edit this goal", edit_goal_path(@goal), :class => "btn btn-info", :method => "get" %>
+    <%= button_to "Back to goals", goals_path, :class => "btn btn-warning mx-3", :method => "get" %>
 
-  <%= button_to "Destroy this goal", @goal, method: :delete %>
-</div>
+    <%= button_to "Destroy this goal", @goal, :class => "btn btn-danger",  method: :delete %>
+  </div>

@@ -4,11 +4,13 @@
 
 <div id="goals">
   <% @goals.each do |goal| %>
-    <%= render goal %>
-    <p>
-      <%= link_to "Show this goal", goal %>
-    </p>
+    <div class="card">
+      <%= render goal %>
+      <p>
+      <%= button_to "Show this goal", goal, :class => "btn btn-info", :method => "get" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New goal", new_goal_path %>
+<%= button_to "New goal", new_goal_path, :class => "btn btn-warning", :method => "get" %>

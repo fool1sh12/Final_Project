@@ -10,7 +10,11 @@
       <%= button_to "Show this book", book, :class => "btn btn-info", :method => "get" %>
       </p> 
       <p>
-      <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning", "data-book-id" => book.id %>
+      <% if book.selections.empty? %>
+        <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning", "data-book-id" => book.id %>
+      <% else %>
+        <%= button_tag "Added!", :id => "selectbook", :class => "btn btn-warning disabled", "data-book-id" => book.id %>
+      <% end %>
       </p>
     </div>
   <% end %>

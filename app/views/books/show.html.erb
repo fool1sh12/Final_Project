@@ -4,7 +4,11 @@
 
 <div class="show-button">
   <%= button_to "Back to books", books_path, :class => "btn btn-info", :method => "get" %>
-  <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning mx-3", "data-book-id" => @book.id %>
+  <% if @book.selections.empty? %>
+    <%= button_tag "Add Book", :id => "selectbook", :class => "btn btn-warning mx-3", "data-book-id" => @book.id %>
+  <% else %>
+    <%= button_tag "Added!", :id => "selectbook", :class => "btn btn-warning disabled mx-3", "data-book-id" => @book.id %>
+  <% end %>
   
 </div>
 
